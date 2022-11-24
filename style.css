@@ -1,0 +1,16 @@
+body{
+    background-color: aquamarine;
+}
+#score{
+    font-size: 45px;
+    margin-left: 20px;
+}
+#timer{
+    font-size: 45px;
+    float: right;
+    margin-right: 20px;
+}
+#drawn{
+    color: red;
+    font-size: 20px;
+}
