@@ -14,3 +14,45 @@ drawn_sketch ="";
 answer_holder ="";
 
 score = 0;
+
+function preload(){
+
+}
+
+function setup(){
+
+}
+
+function draw(){
+    canvas = createCanvas(255,255);
+    canvas.center();
+    background("white");
+    check_sketch();
+    if(drawn_sketch == sketch){
+        answer_holder ="set";
+        score++;
+        document.getElementById("score").innerHTML ="Score: "  + score;
+    }
+}
+function updateCanvas(){
+    background("white");
+    random_no = Math.floor((Math.random()*quick_draw_data_set.length)+1);
+console.log(quick_draw_data_set[random_no]);
+sketch = quick_draw_data_set[random_no];
+document.getElementById("drawn").innerHTML ="Sketch to be drawn : " + sketch;
+
+}
+function check_sketch(){
+ timer_counter++;
+ document.getElementById("timer").innerHTML ="Timer: "  + timer_counter;
+ console.log(timer_counter);
+ if(timer_counter > 400){
+    timer_counter =0;
+    timer_check = "completed";
+     }
+ if(timer_check == "completed" || answer_holder == "set"){
+    timer_check ="";
+    answer_holder ="";
+    updateCanvas();
+ }
+}

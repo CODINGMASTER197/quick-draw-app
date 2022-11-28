@@ -14,3 +14,16 @@ body{
     color: red;
     font-size: 20px;
 }
+canvas{
+    border-radius: 20px;
+    border-color: green;
+    border-width: 5px;
+    border-style: solid;
+    animation-name: surya;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes surya{
+    from{box-shadow: 1px 1px 35px red;}
+    to{box-shadow: 1px 1px 35px blue;}
+}
